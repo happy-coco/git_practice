@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manu Eliza</title>
+    <link rel="stylesheet" href="./portfolio.css" />
+    <link rel="stylesheet" href="./all.min.css" />
+  </head>
+  <body>
+    <nav>
+      <h2 id="logo">Manu Eliza</h2>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="#about-me">About Me</a></li>
+        <li class="navigation-item"><a href="#projects">Projects</a></li>
+        <li class="navigation-item"><a href="#skills">Skills</a></li>
+        <li class="navigation-item"><a href="socials.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
+            <h2>About Me</h2>
+            <p>
+              Hi! I'm Manu, Naval Architect and Marine Engineer who worked several years
+              as Track & Trace Engineer in more than 10 countries, now focused on building
+              a career as a programmer.
+            </p>
+            <p>
+              Fueled by a rich international background, I possess the ability to approach projects from a global perspective,
+              and I thrive on change and innovation. Therefore, I've furthered my education in Computer Science,
+              complementing my solid background as a Naval Engineer.
+            </p>
+            <p>
+              Excellence, wisdom, and consistency have always been my guiding principles.
+            </p>
+            <p>
+              Fun fact! I've been programing for
+              <span id="time-container">0</span> seconds!
+            </p>
+          </div>
+          <img
+            src="manuel.jpg"
+            alt="A photo of Manu Eliza"
+            class="portrait"
+          />
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <details class="project">
+          <summary class="project-title">
+            <h3>US Board Control Panel</h3>
+          </summary>
+          <img
+            src="boardcontrol.JPG"
+            alt="Ultimate Solutions board control panel."
+            class="project-image"
+          />
+          <p class="project-description">
+            I coded a Python program to analyze multiple databases and display key KPIs for the board.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Bulkhead World Website (Services)</h3>
+          </summary>
+          <img
+            src="bulkhead.JPG"
+            alt="Bulkhead, an agency for those who dare to change."
+            class="project-image"
+          />
+          <p class="project-description">
+            What is more fulfilling than coding the website of my agency to further explain our services?
+          </p>
+          <p class="website">
+            <a href="https://bulkheadworld.com" target="_blank">Bulkhead Website</a>
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Happy Coco Website (Products)</h3>
+          </summary>
+          <img
+            src="happycoco.png"
+            alt="Happy Coco, a Spanish clothing brand."
+            class="project-image"
+          />
+          <p class="project-description">
+            My work allowed this clothing brand to have their own online store.
+          </p>
+          <p class="website">
+            <a href="https://happy-coco.github.io" target="_blank">Happy Coco website</a>
+          </p>
+        </details>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+          <img id="symbol" src="html.svg">
+          <img id="symbol" src="css.svg">
+          <img id="symbol" src="javascript.svg">
+          <img id="symbol" src="python.svg">
+          <img id="symbol" src="matlab.svg">
+          <img id="symbol" src="sql.svg">
+          <img id="symbol" src="java.svg">
+          <img id="symbol" src="git.svg">
+          <img id="symbol" src="github.svg">
+          <img id="symbol" src="react.svg">
+          <img id="symbol" src="node.svg">
+          <img id="symbol" src="express.svg">
+        </div>
+      </section>
+    </main>
+
+    <footer>Made in Spain</footer>
+  </body>
+  <script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "12-18-2018";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
+</html>
